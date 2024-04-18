@@ -9,14 +9,14 @@ public class Pikachu extends Pokemon implements INoise {
 
     @Override
     public void attack(Pokemon other) {
-        other.loseLifePoints(3 * level);
-        lifePoint += 3;
+        other.loseLifePoints(6 * level);
+        lifePoint += 6;
         levelUp();
     }
 
     @Override
     public void levelUp() {
-        if (lifePoint >= 2 * level) {
+        if (lifePoint >= 15 * level) {
             level++;
             System.out.println("Pikachu levelled up!");
         } else {
@@ -28,7 +28,7 @@ public class Pikachu extends Pokemon implements INoise {
     @Override
     public int getLevel() {
 
-        return level * 100;
+        return level * 12;
     }
 
     @Override

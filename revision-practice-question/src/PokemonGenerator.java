@@ -30,11 +30,15 @@ public class PokemonGenerator {
     public void start(){
 
         // TODO Step ii. Create 4 different types of Pokemon and add them to the pokemons array. Each one should have a random level.
-        pokemons = new Pokemon[4];
+        pokemons = new Pokemon[7];
         pokemons[0] = new Squirtle("Squirtle", generateRandomLevel());
         pokemons[1] = new Charmander("Charmander", generateRandomLevel());
         pokemons[2] = new Pikachu("Pikachu", generateRandomLevel());
         pokemons[3] = new Psyduck("Psyduck", generateRandomLevel());
+        pokemons[4] = new Gengar("Gengar", generateRandomLevel());
+        pokemons[5] = new Charmeleon("Charmeleon", generateRandomLevel());
+        pokemons[6] = new Charizard("Charizard", generateRandomLevel());
+
 
         System.out.println("Greetings from Pokemon");
         System.out.println("====================");
@@ -60,12 +64,12 @@ public class PokemonGenerator {
 
         // TODO Step v. Randomly generate an display three attacks.
 
-        for (int i = 0; i <= 3; i++) {
-            Pokemon attacker = pokemons[(int)(Math.random()*4)];
-            Pokemon defender = pokemons[(int)(Math.random()*4)];
+        for (int i = 0; i <= pokemons.length; i++) {
+            Pokemon attacker = pokemons[(int)(Math.random()*7)];
+            Pokemon defender = pokemons[(int)(Math.random()*7)];
 
             while(attacker == defender){
-                defender = pokemons[(int)(Math.random()*4)];
+                defender = pokemons[(int)(Math.random()*7)];
             }
             attacker.attack(defender);
 

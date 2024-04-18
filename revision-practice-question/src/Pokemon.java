@@ -28,6 +28,7 @@ public abstract class Pokemon {
     }
 
     public int getLevel() {
+
         return level;
     }
 
